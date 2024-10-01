@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmgacuke8xgp7"]
+
+[ext_resource type="Script" path="res://objects/Debug/death ray/death_ray.gd" id="1_l73lg"]
+
+[node name="DeathRay" type="RayCast3D"]
+target_position = Vector3(0, 0, -6)
+collision_mask = 2
+script = ExtResource("1_l73lg")

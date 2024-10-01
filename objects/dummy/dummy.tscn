@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://vxnk6p525uyi"]
+
+[ext_resource type="Script" path="res://objects/dummy/dummy.gd" id="1_3qtc6"]
+[ext_resource type="Script" path="res://objects/health/health.gd" id="1_4o8du"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4gf35"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j7tsu"]
+
+[node name="Dummy" type="CharacterBody3D" node_paths=PackedStringArray("health")]
+collision_layer = 67
+script = ExtResource("1_3qtc6")
+health = NodePath("Health")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_4gf35")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_j7tsu")
+
+[node name="Health" type="Node" parent="." node_paths=PackedStringArray("parent")]
+script = ExtResource("1_4o8du")
+parent = NodePath("..")
+
+[node name="Health2" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22518, 0)
+billboard = 2
+text = "asd"
+
+[node name="Stts" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.717667, 1.95541, 0)
+billboard = 2
+text = "asd"
+horizontal_alignment = 0
+autowrap_mode = 1
+
+[connection signal="final_blow" from="Health" to="." method="_death"]
