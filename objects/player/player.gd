@@ -9,7 +9,7 @@ signal entity_death()
 @export var climb : Node3D
 @export var health : Health
 
-@export var stats : Dictionary[StringName, float] = {
+@export var stats : Dictionary = {
 	speed = 6.5,
 	max_hp = 100.0,
 	acceleration = 18.0,

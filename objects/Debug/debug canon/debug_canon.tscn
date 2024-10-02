@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://4ii4vbmr7jlp"]
+[gd_scene load_steps=6 format=3 uid="uid://4ii4vbmr7jlp"]
 
 [ext_resource type="Script" path="res://objects/Debug/debug canon/debug_canon.gd" id="1_6pbnd"]
 [ext_resource type="PackedScene" uid="uid://w4uxtukmt84" path="res://objects/Debug/debug canon/debug_rocket.tscn" id="2_4j33d"]
+[ext_resource type="Script" path="res://objects/effects/predesignated_effect.gd" id="3_ht8op"]
 [ext_resource type="Script" path="res://objects/effects/create_effects.gd" id="4_pvtfc"]
 
 [sub_resource type="Resource" id="Resource_0mif2"]
 script = ExtResource("4_pvtfc")
-predesignated_effects = Array[PackedScene]([])
+predesignated_effects = Array[ExtResource("3_ht8op")]([])
 custom_effects = null
 create_timer = null
 timer_wait_time = null

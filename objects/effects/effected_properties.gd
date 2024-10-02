@@ -31,18 +31,10 @@ func assign_object():
 func _get_property_list() -> Array:
 	return [
 		{
-			name = "_test",
-			type = TYPE_STRING,
-			hint = PROPERTY_HINT_ENUM,
-			#hint_string = "ZERO,ONE,TWO,THREE,FOUR,FIVE",
-			hint_string = ",".join(PackedStringArray(dict.keys())),
-			usage = PROPERTY_USAGE_DEFAULT,
-		},
-		{
 			name = "property_name",
 			type = TYPE_STRING,
 			hint = PROPERTY_HINT_ENUM,
 			hint_string = ",".join(PackedStringArray(dict.keys())),
 			usage = PROPERTY_USAGE_DEFAULT,
-		},
+		}
 	]

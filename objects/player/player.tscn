@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c1n8xrti8afpc"]
+[gd_scene load_steps=39 format=3 uid="uid://c1n8xrti8afpc"]
 
 [ext_resource type="Script" path="res://objects/player/player.gd" id="1_oa43o"]
 [ext_resource type="PackedScene" uid="uid://c60wqnmed5dvi" path="res://objects/health/health.tscn" id="2_ohtop"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://objects/player/StateMachine/Jump.gd" id="8_856fg"]
 [ext_resource type="Script" path="res://objects/player/StateMachine/Crouch.gd" id="9_84rn1"]
 [ext_resource type="Script" path="res://objects/effects/create_effects.gd" id="9_hroyd"]
+[ext_resource type="Script" path="res://objects/effects/predesignated_effect.gd" id="11_fby3s"]
 [ext_resource type="Script" path="res://objects/effects/effected_properties.gd" id="13_7x3o6"]
 [ext_resource type="Script" path="res://objects/player/StateMachine/Mantle.gd" id="18_433q2"]
 
@@ -54,11 +55,12 @@ radius = 0.45
 script = ExtResource("13_7x3o6")
 property_modificator = 30.0
 modificator_mode = 1
+_test = null
 property_name = "acceleration"
 
 [sub_resource type="Resource" id="Resource_rsldj"]
 script = ExtResource("9_hroyd")
-predesignated_effects = Array[PackedScene]([])
+predesignated_effects = Array[ExtResource("11_fby3s")]([])
 custom_effects = Array[ExtResource("13_7x3o6")]([SubResource("Resource_14bbh")])
 create_timer = false
 timer_wait_time = 0.0
@@ -67,17 +69,19 @@ timer_wait_time = 0.0
 script = ExtResource("13_7x3o6")
 property_modificator = 5.0
 modificator_mode = 1
+_test = null
 property_name = "speed"
 
 [sub_resource type="Resource" id="Resource_uhjdf"]
 script = ExtResource("13_7x3o6")
 property_modificator = -85.0
 modificator_mode = 1
+_test = null
 property_name = "acceleration"
 
 [sub_resource type="Resource" id="Resource_jrw7k"]
 script = ExtResource("9_hroyd")
-predesignated_effects = Array[PackedScene]([])
+predesignated_effects = Array[ExtResource("11_fby3s")]([])
 custom_effects = Array[ExtResource("13_7x3o6")]([SubResource("Resource_plytf"), SubResource("Resource_uhjdf")])
 create_timer = false
 timer_wait_time = 0.0
@@ -86,11 +90,12 @@ timer_wait_time = 0.0
 script = ExtResource("13_7x3o6")
 property_modificator = -68.0
 modificator_mode = 1
+_test = null
 property_name = "acceleration"
 
 [sub_resource type="Resource" id="Resource_wh4he"]
 script = ExtResource("9_hroyd")
-predesignated_effects = Array[PackedScene]([])
+predesignated_effects = Array[ExtResource("11_fby3s")]([])
 custom_effects = Array[ExtResource("13_7x3o6")]([SubResource("Resource_cymwl")])
 create_timer = false
 timer_wait_time = 0.0
@@ -99,17 +104,19 @@ timer_wait_time = 0.0
 script = ExtResource("13_7x3o6")
 property_modificator = -40.0
 modificator_mode = 1
+_test = null
 property_name = "speed"
 
 [sub_resource type="Resource" id="Resource_jmco5"]
 script = ExtResource("13_7x3o6")
 property_modificator = 50.0
 modificator_mode = 1
+_test = null
 property_name = "acceleration"
 
 [sub_resource type="Resource" id="Resource_rceno"]
 script = ExtResource("9_hroyd")
-predesignated_effects = Array[PackedScene]([])
+predesignated_effects = Array[ExtResource("11_fby3s")]([])
 custom_effects = Array[ExtResource("13_7x3o6")]([SubResource("Resource_pmecb"), SubResource("Resource_jmco5")])
 create_timer = false
 timer_wait_time = 0.0
